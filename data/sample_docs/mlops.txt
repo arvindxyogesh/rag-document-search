@@ -1,0 +1,31 @@
+MLOps: Machine Learning Operations
+
+MLOps is a set of practices that combines machine learning, DevOps, and data engineering to deploy and maintain machine learning models in production reliably and efficiently. It addresses the unique challenges of ML systems compared to traditional software.
+
+The ML Lifecycle
+
+The machine learning lifecycle encompasses data collection, data preparation, model development, model evaluation, model deployment, and model monitoring. Each stage introduces potential failure points and requires systematic tooling and processes.
+
+Data versioning ensures reproducibility by tracking changes to datasets over time. Tools like DVC integrate with Git to version both code and data. Feature stores centralize feature computation and serving, reducing duplication across teams and ensuring training-serving consistency.
+
+Experiment Tracking
+
+Experiment tracking systems record hyperparameters, metrics, code versions, and artifacts for every training run. MLflow provides an open-source platform for tracking experiments, packaging code, and deploying models. Weights and Biases offers a hosted solution with real-time visualization and collaboration features.
+
+Reproducibility requires capturing random seeds, library versions, data snapshots, and hardware configurations. Container technologies like Docker ensure consistent execution environments across development and production.
+
+Model Deployment Patterns
+
+Model serving can be synchronous via REST APIs or gRPC for real-time inference, or asynchronous via message queues for batch processing. FastAPI and TorchServe are popular frameworks for building model serving systems. Containerization with Docker and orchestration with Kubernetes enable scalable, reproducible deployments.
+
+Canary deployments gradually route traffic to new model versions, reducing risk. Shadow mode runs new models alongside production ones without affecting users, enabling safe validation. Blue-green deployments maintain two identical environments, switching between them for zero-downtime releases.
+
+Feature stores like Feast and Tecton provide a unified interface for storing, computing, and serving features. They ensure point-in-time correctness to prevent data leakage and maintain consistency between training and serving.
+
+Model Monitoring
+
+Data drift detection identifies when statistical properties of input features change over time, which can degrade model performance. Concept drift occurs when the relationship between inputs and outputs changes, requiring model retraining. Population stability index and Kolmogorov-Smirnov tests are common drift detection approaches.
+
+Model performance monitoring tracks business and technical metrics in production. Alerting systems notify teams when metrics deviate beyond configured thresholds. A/B testing frameworks enable rigorous evaluation of model variants in production.
+
+CI/CD for ML extends software continuous integration practices to include data validation, model training, evaluation gates, and automated deployment. Testing ML systems requires data quality tests, model performance tests, and integration tests for serving infrastructure.

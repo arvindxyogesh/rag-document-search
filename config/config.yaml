@@ -1,0 +1,21 @@
+ingestion:
+  data_dir: data/sample_docs
+
+chunking:
+  chunk_size: 150    # words per chunk
+  overlap: 20        # word overlap between adjacent chunks
+
+embeddings:
+  model_name: all-MiniLM-L6-v2
+  batch_size: 64
+
+vector_store:
+  store_dir: vector_store/
+
+retrieval:
+  top_k: 5
+
+generation:
+  model: gpt-3.5-turbo
+  temperature: 0.0
+  max_tokens: 512

@@ -1,0 +1,27 @@
+Deep Learning and Neural Networks
+
+Deep learning is a subfield of machine learning that uses neural networks with multiple layers to learn representations of data with multiple levels of abstraction. These methods have dramatically improved state-of-the-art performance in computer vision, natural language processing, and speech recognition.
+
+Neural Network Architecture
+
+A neural network consists of layers of interconnected nodes or neurons. The input layer receives raw data, hidden layers transform it through learned weights and activation functions, and the output layer produces predictions. Deep networks have many hidden layers, enabling them to learn complex hierarchical representations.
+
+Convolutional Neural Networks are specialized for processing grid-like data such as images. They use convolutional layers to automatically learn spatial hierarchies of features, followed by pooling layers to reduce dimensionality. Applications include image recognition, object detection, semantic segmentation, and medical imaging analysis.
+
+Recurrent Neural Networks are designed for sequential data such as text, time series, and audio. They maintain hidden state that captures information from previous time steps. Long Short-Term Memory networks and Gated Recurrent Units solve the vanishing gradient problem in standard recurrent networks.
+
+Transformers and Attention
+
+The Transformer architecture revolutionized natural language processing by replacing recurrence with self-attention mechanisms. BERT achieved state-of-the-art performance on many NLP benchmarks through bidirectional pre-training. GPT models demonstrated that large-scale autoregressive language modeling produces powerful general-purpose representations.
+
+Self-attention allows the model to weigh the importance of different parts of the input when processing each element. The attention score between two positions determines how much one position should attend to another. Multi-head attention runs multiple attention operations in parallel, capturing different relationship types simultaneously.
+
+Training Deep Networks
+
+Backpropagation computes gradients of the loss function with respect to all network parameters using the chain rule. Stochastic gradient descent and adaptive optimizers like Adam update parameters iteratively to minimize the loss. Batch normalization normalizes activations within each mini-batch, stabilizing training and enabling higher learning rates.
+
+Transfer learning leverages pre-trained model weights, fine-tuning them on domain-specific datasets. This approach dramatically reduces required training data and computation while achieving strong performance. Techniques include full fine-tuning, linear probing, and parameter-efficient methods like LoRA.
+
+Regularization Methods
+
+Dropout randomly sets activations to zero during training, preventing co-adaptation of neurons and acting as ensemble learning. Weight decay adds a penalty proportional to weight magnitudes, encouraging sparse representations. Data augmentation artificially expands training sets through transformations like rotation, flipping, and color jitter.
